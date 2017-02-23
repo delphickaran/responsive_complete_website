@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html ng-app = 'myApp'>
+    <head>
+          <meta charset="utf-8">	
+	     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 
+        <title>Ed Sheeran</title>
+		
+		<script src="https://code.angularjs.org/1.6.2/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script> 
+        <script src="https://code.angularjs.org/1.6.2/angular-route.min.js"></script>
+		
+		
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+		<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+		<script src="app.js"></script>
+    </head>
+    <body>
+    
+<div id="main">
+<div id="main2">
+<!--          navigation bar          -->
+ <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="5">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="brand.jpg" alt=""></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref='workshop'>Tour</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Albums <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li><a ui-sref='blog'>Blog</a></li>
+          
+        <li>
+            <div class="container-fluid">
+               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Login</button>
+                  <div class="modal fade" id="myModal" role="dialog">
+                     <div class="modal-dialog modal-md">
+    
+      <!-- Modal content-->
+                       <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Sign Up</h4>
+                            </div>
+                         <div class="modal-body">
+                           <p><strong>Sign up</strong></p>
+                             <div>
+                                <label>Name:</label> <input type="text" placeholder="name" style="background-color:white ;border-color:white">
+                             </div>
+                             <div>
+                                <label>Password:</label> <input type="password" placeholder="password">
+                             </div>
+                             <div>
+                                <label>Confirm Password</label> <input type="password" placeholder="password">
+                             </div>
+                             
+                             <div>
+                                 <fieldset data-role="controlgroup">
+                                    <strong>Choose your gender:</strong>
+                                    <label for="male">Male</label>
+                                    <input type="radio" name="gender" id="male" value="male" checked>
+                                    <label for="female">Female</label>
+                                    <input type="radio" name="gender" id="female" value="female">
+                                </fieldset>
+                             
+                             </div>
+                             <div> 
+                               <input type="submit" value="sign up" class="btn btn-danger btn-lg">
+                             </div>
+                         </div>
+                         <div class="modal-footer">
+                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         </div>
+                      </div>
+      
+                    </div>
+                </div>
+            </div>
+          </li>
+      </ul>
+     
+        
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    
+    
+<!-- Hero Section  -->
+    <section id="hero">
+        <div class="container">
+           <div class="herocontent">
+               
+            <h2><strong>Ed Sheeran</strong></h2>
+            <h3>Singer-songwriter</h3>
+            <div id="underline"></div>
+            <div class="row"><div class="col-md-2"><p>From:</p></div> <div class="col-md-4"><p>England</p>
+</div> </div>
+            <div class="row"><div class="col-md-2"><p>Years Active</p></div> <div class="col-md-4"><p style="color:yellow">2004-present</p>
+ </div> </div>
+            <div class="row"><div class="col-md-2"><p>Website</p></div> <div class="col-md-4"> 
+                <p><a href="https://www.edsheeran.com">www.edsheeran.com</a></p>
+ </div> </div>
+       
+           </div>
+        </div>
+       
+   <a href="">
+     <span class="glyphicon glyphicon-chevron-down arrow"></span>
+</a>
+    </section>
+</div>
+</div>    
+<!-- qoute -->
+    <section id="quote" ui-view>
+        <div class="container">
+        <div class="qoutesband">
+            <div class="myquote-ctn">
+            
+            <span class="doubleqoutes ">
+            <i> 
+            “
+            </i>
+            </span>
+            <span class="text">   
+            <i>
+               He took his pain and turned it into something beautiful. Into something that people connect to. And that's what good music does. It speaks to you. It changes you.
+		    </i>
+            <span class="doubleqoutes">
+            <i>
+            ”  
+            </i></span>
+            </span>
+            </div>
+           
+            </div>
+        </div>
+    </section>
+<!--Information 1       -->
+    <section id="info1">
+        <div class="container">
+           <div class="row">
+                <div class="col-md-8">
+                  <p>
+                    Sheeran's popularity abroad began in 2012. In the US, he made a guest appearance on Taylor Swift's fourth studio album, Red. "The A Team" was nominated for Song of the Year at the 2013 Grammy Awards, where he performed the song with Elton John. He spent much of 2013 opening for Swift's The Red Tour in North America dates. In late 2013, he performed three sold-out shows at New York's Madison Square Garden as a headline act.
+                  </p>
+                  <h3><strong>Early life of Ed Sheeran.</strong></h3>
+                  <p>
+                   Sheeran was born in Hebden Bridge, West Yorkshire, and moved with his family to Framlingham in Suffolk when he was a child. He has an older brother named Matthew, who works as a composer. Their parents, John and Imogen, are London-born. His paternal grandparents were Irish, and Sheeran has stated his father hailed from "a very large" Catholic family. </p>
+                   <p>
+                   John is an art curator and lecturer, and Imogen is a culture publicist turned jewellery designer. His parents ran Sheeran Lock, an independent art consultancy, from 1990 to 2010. Their work usually took them to London, and they spent their weekends travelling with their children, while playing music. Sheeran's early childhood memories include listening to the records of Bob Dylan and Eric Clapton. According to Sheeran, the album that first introduced him to music was Van Morrison's Irish Heartbeat. During his childhood, John took him to a number of live concerts that would later inspire his musical creations. These included seeing Eric Clapton at the Royal Albert Hall, Paul McCartney in Birmingham, and Bob Dylan. </p>
+                    <p>
+                    Sheeran sang in a local church choir from the age of four, learned to play the guitar at a very young age, and began writing songs while at Thomas Mills High School in Framlingham. When he was eleven, he went with his father to a Damien Rice show in Ireland. In addition to Rice, he has also cited The Beatles, Dylan, Nizlopi and Eminem as his biggest musical influences. He is a patron of the Youth Music Theatre UK and of Access to Music, where he studied Artist Development course. He was accepted at the National Youth Theatre in London as a teenager.
+                  </p>
+                   
+                </div>
+                <div class="col-md-4 sidenav">
+                  <img src="sheeran1.jpg" alt="" class="img-responsive" />
+                  
+                  <img src="sheeran2.jpg" alt="" class="img-responsive mtop" />
+                </div>
+           </div>
+        </div>
+    </section>
+<!--      Long Image-->
+<div class="row">
+    <div class="container">
+         <img src="brand.jpg" alt="" class="img-responsive" />
+    </div>
+</div>
+<!--info2 section           -->
+   <section id="info2">
+       <div class="container">
+           <div class="row mtop">
+               <div class="col-md-8">
+                   <h3><strong>Career Beginnings</strong></h3>
+                   <p>Sheeran began recording music in 2004, and independently released his first collection of work, Spinning Man. He has been friends with fellow English singer, Passenger, since he was 15, with the two playing on the same gig in Cambridge. He moved to London in 2008, and began playing in small venues. In 2008, he auditioned for the ITV series, Britannia High. He also opened for Nizlopi in Norwich in April 2008, after being one of their guitar technicians. He released another EP in 2009, You Need Me, just before going on tour with Just Jack. He also did a few collaborations with Essex singer, Leddra Chapman, including CeeLo Green's "Fuck You". In February 2010, Sheeran posted a video through SB.TV, and rapper Example invited Sheeran to tour with him. In the same month, he also released his critically acclaimed Loose Change EP, which featured his future debut single, "The A Team". In the autumn of 2009, Sheeran began studying music at the Academy of Contemporary Music (ACM) in Guildford, Surrey as an undergraduate,though it is not clear how long he remained at the college.</p>
+                   <p>In April 2010, Sheeran bought a ticket to Los Angeles, with no contacts other than one poetry night. He played open mic nights all over the city, before he was spotted at The Foxxhole by Jamie Foxx, who was so impressed that he offered Sheeran the use of his recording studio and the bed of his Hollywood home for the rest of his stay. Throughout 2010, Sheeran began to be seen by more people over the internet through YouTube and his fan-base grew, with him also getting credit from The Independent newspaper, England football captain Rio Ferdinand and Elton John. Sheeran also self-released two other EPs in 2010, Ed Sheeran: Live at the Bedford and Songs I Wrote with Amy, which is a collection of love songs he wrote in Wales with singer, Amy Wadge.</p>
+                   <p>On 8 January 2011, Sheeran released another independent EP, No. 5 Collaborations Project, featuring grime artists such as Wiley, Jme, Devlin, Sway and Ghetts. With this EP, Sheeran gained mainstream attention for reaching number 2 in the iTunes chart without any promotion or label, selling over 7,000 copies in its first week. Three months later, Sheeran put on a free show to fans at the Barfly in Camden Town. Over 1,000 fans turned up, so Sheeran played four different shows to ensure everyone saw a gig, including a gig outside on the street after the venue had closed. Later that month, Sheeran was signed to Asylum Records.</p>
+
+                   <h3><strong>2016–present.</strong></h3>
+
+                   <p>On 13 December 2016, after a year long hiatus and social media break, Sheeran tweeted a picture and changed his Twitter, Facebook and Instagram to a light blue implying the release of a new album, each of Sheeran's previous albums were a single coloured background with a solid mathematical symbol. On 1 January 2017, Sheeran uploaded a video on social media websites which shows him holding a piece of paper with the words "New Music Coming Friday" written on it.</p>
+
+                   <p>On 6 January, Sheeran released two singles, "Shape of You" and "Castle on the Hill"; the theme of the latter single is about Sheeran's upbringing in his home town of Framlingham in Suffolk, with the castle referring to Framlingham Castle.</p>
+
+                   <p>On 17 January, "Shape of You" debuted at number one on the US Billboard Hot 100, while "Castle on the Hill" entered at number six; this made Sheeran the first artist ever to have two songs simultaneously debut in the US top 10. On 26 January, Sheeran announced tour dates for in Europe, South America and North America from 17 March until 14 June 2017.</p>
+
+
+               </div>
+               <div class="col-md-4">
+                  
+       
+                <div class="qoutesbottom">
+                <div class="myquote-ctn">
+
+                <span class="doubleqoutes-bottom ">
+                <i> 
+                "
+                </i>
+                </span>
+                <span class="text-bottom">   
+                <i>
+                 He took his pain and turned it into something beautiful. Into something that people connect to. And that's what good music does. It speaks to you. It changes you.
+                </i>
+                <span class="doubleqoutes-bottom">
+                <i>
+                ”   
+                </i></span>
+                </span>
+                </div>
+
+                </div>
+                   <img src="sheeran1.jpg" alt="" class="img-responsive" />
+                   <img src="brand.jpg" alt="" class="img-responsive" />
+                   <img src="ed_sheeran.jpg" alt="" class="img-responsive" />
+                   <img src="sheeran2.jpg" alt="" class="img-responsive" />
+               </div>
+           </div>
+       </div>
+
+   </section>
+<!--signup band -->
+    <section id="signupband">
+       <div class="container">
+            <h3>
+            <strong>
+            For latest updates about upcoming album.
+            <br>
+            <font color="#FF5733">Subscribe Us.</font>
+            </strong>
+            </h3>
+       </div>
+    </section>
+<!--    Footer-->
+        
+<footer>
+<!--   Top Footer    -->
+<div class="topfooter">
+    <div class="container">
+        <div class="row mtop">
+            <div class="col-md-4">
+                <h1>Stay in the know</h1>
+                <p>Sign up for updates on new albums and Tour guide.</p>
+                <div class="row">
+                    <div class="input-group input-group-lg custom-input">
+                      <input type="text" class="form-control " placeholder="Enter your Email">
+                       <span class="input-group-btn">
+                        <button class="btn btn-lg btn-yellow" type="button"><strong>GET UPDATES</strong></button>
+                      </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.row -->
+
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-1">
+                        <ul>
+                             <li>
+                                 
+                        <h5><strong>Tour</strong></h5>
+                             </li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1"> 
+                      <ul>
+                       <li> 
+                        <h5><strong>Albums </strong></h5>
+                    </li>
+                         
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                      <ul>
+                       <li>
+                        <h5><strong>Songs</strong></h5>
+                       </li>
+                         
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                              <li><a href="#">Lorem Ipsum</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Bottum Footer    -->
+   <div class="bottomfooter">
+        <div class="container">
+           <div class="row">
+            <div class="col-md-6">
+                <p>&copy; 2017 Ed Sheeran. All rights reserved. Terms | Privacy</p>
+            </div>
+            <div class="col-md-2 pull-right">
+                    <ul class="social-network social-circle">    
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoYoutube" title="Rss"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+            </div>
+           </div>
+        </div>
+   </div>
+</footer>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </body>
+</html>
